@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Kiehls</title>
+
+    <!--Css-->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/kiehls_main.css">
+
+    <!--Web Font-->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!--Favicon-->
+    <link rel="apple-touch-icon-precomposed" href="img/iphone_icon.png">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+
+</head>
+
+<body>
+    <!-- popup -->
+    <div id="popup_wrap" class="center">
+        <div id="popup">
+            <figure class="popup_img">
+                <a href="#">
+                    <img src="img/main/pop_up.png" alt="팝업창">
+                </a>
+                <h3 class="popup_text">
+                    아낌없이 뿜뿜 터지는! <br>
+                    12월 구매 혜택
+                </h3>
+            </figure>
+            <div class="clearfix">
+                <strong>
+                    <input type="checkbox" id="stop" onclick="todaycloseWin()">
+                    <label for="stop" id="day">
+                        오늘그만보기
+                    </label>
+                </strong>
+                <span class="close">
+                    닫기
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- //popup -->
+
+    <!-- header -->
+    <header>
+        <!--mobile_menu-->
+        <div id="m_menu">
+            <a href="#">
+                <img src="img/main/btn_menu.png" alt="메뉴">
+            </a>
+        </div>
+        <div id="header_wrap" class="center">
+            <!--모바일 네비게이션 복사영역-->
+            <div id="mb_navi">
+                <!--모바일 네비게이션 바-->
+            </div>
+            <!-- //mb_navi -->
+            <h1>
+                <a href="main.html">
+                    <img src="img/main/kiehls_logo.png" alt="kiehls">
+                </a>
+            </h1>
+            <div id="header_left">
+                <ul>
+                    <li>
+                        <a href="#">
+                            신제품
+                        </a>
+                        <ul class="menu_sec">
+                            <li>
+                                <a href="#">
+                                    신제품
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    베스트셀러
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            제품
+                        </a>
+                        <ul class="menu_sec">
+                            <li>
+                                <a href="#">
+                                    스킨케어
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    맨케어
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    헤어케어
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    바디&#38;베이비
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    기프트
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            이벤트
+                        </a>
+                        <ul class="menu_sec">
+                            <li>
+                                <a href="#">
+                                    온라인몰 혜택안내
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    이달의 혜택
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            브랜드
+                        </a>
+                        <ul class="menu_sec">
+                            <li>
+                                <a href="#">
+                                    Since 1851
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    캠페인
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            매장찾기
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            세일
+                        </a>
+                    </li>
+                </ul>
+                <!-- //menu -->
+            </div>
+            <div id="header_right">
+                <div class="clearfix mb_top">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/main/header_icon1.png" alt="로그인">
+                                <span class="h_i_hover">
+                                    <img src="img/main/header_icon1-2.png" alt="로그인">
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/main/header_icon2.png" alt="찜">
+                                <span class="h_i_hover">
+                                    <img src="img/main/header_icon2-2.png" alt="찜">
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/main/header_icon3.png" alt="장바구니">
+                                <span class="h_i_hover">
+                                    <img src="img/main/header_icon3-2.png" alt="장바구니">
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- //icon -->
+                </div>
+                <form id="search_wrap">
+                    <input type="search" id="search">
+                    <input type="submit" id="search_btn" value="검색">
+                </form>
+            </div>
+        </div>
+        <!-- //header_wrap -->
+    </header>
+    <!-- //header -->
+
+    <!-- menu_bg -->
+    <div id="menu_bg_wrap">
+        <div class="menu_bg">
+        </div>
+    </div>
+    <!-- //menu_bg -->
+
+    <!-- slide -->
+    <div id="swiper1">
+        <div class="swiper-container1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide banner_img1">
+                    <img src="img/main/sl1-2.jpg" alt="상상대로 취향대로 키엘 홀리데이 기프트">
+                    <div class="banner_text1">
+                        <h3>
+                            상상대로 취향대로<br> 키엘 홀리데이 기프트
+                        </h3>
+                        <a href="#">
+                            <p>
+                                구매하기 >
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide banner_img2">
+                    <img src="img/main/sl2-2.jpg" alt="선물맛집 키엘이 준비한 홀리데이 특별 기프트 세트">
+                    <div class="banner_text2">
+                        <h3>
+                            선.물.맛.집 키엘이 준비한<br>홀리데이 특별 기프트 세트
+                        </h3>
+                        <a href="#">
+                            <p>
+                                구매하기 >
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide banner_img3">
+                    <img src="img/main/sl3-2.jpg" alt="남녀노소 누구나 좋아하는 실속 있는 선물!">
+                    <div class="banner_text3">
+                        <h3>
+                            남.녀.노.소 누구나<br>좋아하는 실속 있는 선물!
+                        </h3>
+                        <a href="#">
+                            <p>
+                                구매하기 >
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <!-- //slide -->
+    <!-- quickmenu -->
+    <div id="quick_wrap">
+        <div id="quick_right_menu">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="img/main/quick1.png" alt="홀리데이 기프트세트">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/main/quick2.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/main/quick3.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/main/quick4.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/main/quick5.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- //quickmenu -->
+
+    <!-- slide2 -->
+    <div id="swiper2" class="center">
+        <h2>
+            신상품
+        </h2>
+        <div class="swiper-container2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/main/n1.png" alt="1">
+                        <span class="name">
+                            NEW 울트라 훼이셜 크림
+                        </span>
+                        <span class="price">
+                            27,000원 ~ 78,000원
+                        </span>
+                    </a>
+                    <div class="p_icon">
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon1.png" alt="찜">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon1-2.png" alt="찜">
+                            </span>
+                        </a>
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon2.png" alt="장바구니">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon2-2.png" alt="장바구니">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/main/n2.png" alt="1">
+                        <span class="name">
+                            훼이셜 퓨얼 데일리 에너자이징
+                        </span>
+                        <span class="price">
+                            53,000원
+                        </span>
+                    </a>
+                    <div class="p_icon">
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon1.png" alt="찜">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon1-2.png" alt="찜">
+                            </span>
+                        </a>
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon2.png" alt="장바구니">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon2-2.png" alt="장바구니">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/main/n3.png" alt="1">
+                        <span class="name">
+                            메이드 포 올 젠틀 바디 워시
+                        </span>
+                        <span class="price">
+                            43,000원
+                        </span>
+                    </a>
+                    <div class="p_icon">
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon1.png" alt="찜">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon1-2.png" alt="찜">
+                            </span>
+                        </a>
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon2.png" alt="장바구니">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon2-2.png" alt="장바구니">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/main/n4.png" alt="1">
+                        <span class="name">
+                            에이지 디펜더 젤 모이스처라이저
+                        </span>
+                        <span class="price">
+                            59,000원
+                        </span>
+                    </a>
+                    <div class="p_icon">
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon1.png" alt="찜">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon1-2.png" alt="찜">
+                            </span>
+                        </a>
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon2.png" alt="장바구니">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon2-2.png" alt="장바구니">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/main/n5.png" alt="1">
+                        <span class="name">
+                            크렘 드 꼬르 한정판
+                        </span>
+                        <span class="price">
+                            43,000원 ~ 69,000원
+                        </span>
+                    </a>
+                    <div class="p_icon">
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon1.png" alt="찜">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon1-2.png" alt="찜">
+                            </span>
+                        </a>
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon2.png" alt="장바구니">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon2-2.png" alt="장바구니">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/main/n6.png" alt="1">
+                        <span class="name">
+                            칼렌듈라 세럼- 인퓨즈드 워터 크림
+                        </span>
+                        <span class="price">
+                            38,000원 ~ 56,000원
+                        </span>
+                    </a>
+                    <div class="p_icon">
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon1.png" alt="찜">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon1-2.png" alt="찜">
+                            </span>
+                        </a>
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon2.png" alt="장바구니">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon2-2.png" alt="장바구니">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/main/n7.png" alt="1">
+                        <span class="name">
+                            크렘 드 꼬르 휩트 바디 한정판
+                        </span>
+                        <span class="price">
+                            59,000원
+                        </span>
+                    </a>
+                    <div class="p_icon">
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon1.png" alt="찜">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon1-2.png" alt="찜">
+                            </span>
+                        </a>
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon2.png" alt="장바구니">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon2-2.png" alt="장바구니">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <!-- //slide2 -->
+
+    <!-- slide3 -->
+    <div id="swiper3" class="center">
+        <h2>
+            주간 베스트 상품
+        </h2>
+        <div class="swiper-container3">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/main/b1.png" alt="1">
+                        <span class="name">
+                            키엘 자외선 차단제
+                        </span>
+                        <span class="price">
+                            31,000원 ~ 51,000원
+                        </span>
+                    </a>
+                    <div class="p_icon">
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon1.png" alt="찜">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon1-2.png" alt="찜">
+                            </span>
+                        </a>
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon2.png" alt="장바구니">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon2-2.png" alt="장바구니">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/main/b2.png" alt="1">
+                        <span class="name">
+                            울트라 훼이셜 토너
+                        </span>
+                        <span class="price">
+                            29,000원
+                        </span>
+                    </a>
+                    <div class="p_icon">
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon1.png" alt="찜">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon1-2.png" alt="찜">
+                            </span>
+                        </a>
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon2.png" alt="장바구니">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon2-2.png" alt="장바구니">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/main/b3.png" alt="1">
+                        <span class="name">
+                            NEW 울트라 훼이셜 크림
+                        </span>
+                        <span class="price">
+                            27,000원 ~ 78,000원
+                        </span>
+                    </a>
+                    <div class="p_icon">
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon1.png" alt="찜">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon1-2.png" alt="찜">
+                            </span>
+                        </a>
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon2.png" alt="장바구니">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon2-2.png" alt="장바구니">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/main/b4.png" alt="1">
+                        <span class="name">
+                            립밤 넘버1
+                        </span>
+                        <span class="price">
+                            12,000원
+                        </span>
+                    </a>
+                    <div class="p_icon">
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon1.png" alt="찜">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon1-2.png" alt="찜">
+                            </span>
+                        </a>
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon2.png" alt="장바구니">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon2-2.png" alt="장바구니">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/main/b5.png" alt="1">
+                        <span class="name">
+                            크렘 드 꼬르
+                        </span>
+                        <span class="price">
+                            43,000원 ~ 102,000원
+                        </span>
+                    </a>
+                    <div class="p_icon">
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon1.png" alt="찜">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon1-2.png" alt="찜">
+                            </span>
+                        </a>
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon2.png" alt="장바구니">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon2-2.png" alt="장바구니">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/main/b6.png" alt="1">
+                        <span class="name">
+                            레어 어스 딥 포어 데일리 클렌저
+                        </span>
+                        <span class="price">
+                            17,000원 ~ 31,000원
+                        </span>
+                    </a>
+                    <div class="p_icon">
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon1.png" alt="찜">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon1-2.png" alt="찜">
+                            </span>
+                        </a>
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon2.png" alt="장바구니">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon2-2.png" alt="장바구니">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/main/b7.png" alt="1">
+                        <span class="name">
+                            프리시전 리프팅
+                        </span>
+                        <span class="price">
+                            95,000원 ~ 115,000원
+                        </span>
+                    </a>
+                    <div class="p_icon">
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon1.png" alt="찜">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon1-2.png" alt="찜">
+                            </span>
+                        </a>
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon2.png" alt="장바구니">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon2-2.png" alt="장바구니">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/main/b8.png" alt="1">
+                        <span class="name">
+                            수퍼 멀티 코렉티브 크림
+                        </span>
+                        <span class="price">
+                            82,000원 ~ 99,000원
+                        </span>
+                    </a>
+                    <div class="p_icon">
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon1.png" alt="찜">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon1-2.png" alt="찜">
+                            </span>
+                        </a>
+                        <a href="#" class="p_i">
+                            <img src="img/main/p_icon2.png" alt="장바구니">
+                            <span class="p_icon_hover">
+                                <img src="img/main/p_icon2-2.png" alt="장바구니">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <!-- //slide3 -->
+
+    <!-- banner -->
+    <div id="banner_wrap" class="center">
+        <div class="banner_top">
+            <div class="tb_wrap banner1_wrap">
+                <div class="banner banner1">
+                    <figure>
+                        <img src="img/main/banner1.png" alt="키엘 기프트 세트">
+                    </figure>
+                    <div class="banner_text">
+                        <h4>
+                            키엘 기프트 세트
+                        </h4>
+                        <p>
+                            실속있고,풍성하게 선물하세요!
+                        </p>
+                        <a href="#">
+                            <p>구매하기></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- //banner1 -->
+            <div class="tb_wrap banner2_wrap">
+                <div class="banner banner2">
+                    <figure>
+                        <img src="img/main/banner2.png" alt="주름패치 마스크">
+                    </figure>
+                    <div class="banner_text">
+                        <h4>
+                            주름패치 마스크
+                        </h4>
+                        <p>
+                            깊은주름 고민까지, 강력한 주름개선!
+                        </p>
+                        <a href="#">
+                            <p>구매하기></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- //banner2-->
+            <div class="tb_wrap banner3_wrap">
+                <div class="banner banner3">
+                    <figure>
+                        <img src="img/main/banner3.png" alt="헤어케어 솔류션">
+                    </figure>
+                    <div class="banner_text">
+                        <h4>
+                            헤어 케어 솔루션
+                        </h4>
+                        <p>
+                            헤어도 고민별 맞춤 케어 하세요!
+                        </p>
+                        <a href="#">
+                            <p>구매하기></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- //banner3 -->
+        </div>
+        <!-- //banner_top -->
+        <div class="banner_bottom">
+            <figure>
+                <img src="img/main/banner4.png" alt="키엘스킨케어">
+            </figure>
+            <div class="banner_bt_text">
+                <h4>
+                    키엘스킨케어
+                </h4>
+                <p>
+                    1851년 뉴욕 약국에서 출발한 165년 전통의 코스메틱 브랜드 키엘은 약국 전통에서 축적된 전문적인 지식과 내추럴 성분에 대한 노하우를 바탕으로 순하면서도 탁월한 효과의 제품을 만들어 오고있습니다.
+                </p>
+                <div class="bn_bt">
+                    <a href="#">
+                        자세히 보기 →
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- //banner_bottom -->
+    </div>
+    <!-- //banner -->
+    
+    <!-- footer -->
+    <footer>
+        <div id="footer_wrap" class="center">
+            <div class="foot_left">
+                <h4>
+                    Ⓒ 2019 KIEHL’S SINCE 1851.
+                </h4>
+                <p>
+                    사업자명: 엘오케이(유) | 대표: 크리스티앙 마르코스 아르나이 | 사업자 등록번호: 220-81-73483 | 통신판매업신고: 2012-서울강남-01663 | 주소: 서울특별시 강남구 영동대로 517 아셈타워 31층 | 개인정보관리책임자: 유민아 | 고객 케어 센터, 구매, 배송, 사이트 이용 문의 080-822-3322
+                    제품 문의: 080-022-3332
+                </p>
+
+            </div>
+            <!-- //foot_left -->
+            <div class="foot_right">
+                <ul>
+                    <li>
+                        <a href="#">개인정보 처리방침</a>
+                    </li>
+                    <li>
+                        <a href="#">이용약관</a>
+                    </li>
+                    <li>
+                        <a href="#">글로벌 사이트</a>
+                    </li>
+                    <li>
+                        <a href="#">고객센터</a>
+                    </li>
+                    <li>
+                        <a href="#">사이트맵</a>
+                    </li>
+                </ul>
+                <p>
+                    퍼스트데이터코리아(유) 구매안전(에스크로) 서비스가맹점
+                    고객님은 안전한 전자상거래를 위해 저희 쇼핑몰에서 가입한
+                    퍼스트데이터코리아(유)의 구매안전 서비스를 이용할 수 있습니다.
+                </p>
+                <div class="sns_icon">
+                    <a href="#">
+                        <img src="img/main/snsicon1.png" alt="트위터">
+                    </a>
+                    <a href="#">
+                        <img src="img/main/snsicon2.png" alt="페이스북">
+                    </a>
+                    <a href="#">
+                        <img src="img/main/snsicon3.png" alt="인스타그램">
+                    </a>
+                </div>
+
+            </div>
+            <!-- //foot_right -->
+        </div>
+    </footer>
+    <!-- //footer -->
+
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/today_close.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
